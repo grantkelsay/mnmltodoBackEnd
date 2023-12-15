@@ -36,6 +36,7 @@ public class ColumnsController {
     // Return the list of columns stored in the H2 database
     @GetMapping("/columns")
     public ResponseEntity<List<Columns>> getAllColumns() {
+        System.out.println("Render is working!");
         try {
             List<Columns> columnList = new ArrayList<>();
             colsRepo.findAll().forEach(columnList::add);
